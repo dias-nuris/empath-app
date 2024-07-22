@@ -1,0 +1,28 @@
+[versions]
+version-code = "1"
+version-name = "1.0"
+
+#core
+android-compileSdk = "34"
+android-minSdk = "24"
+android-targetSdk = "34"
+agp = "8.2.2"
+compose = "1.6.11"
+compose-activity = "1.9.0"
+google-maps = "6.0.0"
+
+[libraries]
+#main
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "compose-activity" }
+google-maps = { group = "com.google.maps.android", name = "maps-compose", version.ref = "google-maps"}
+
+#gradle-plugin
+android-gradle-plugin = { module = "com.android.tools.build:gradle", version.ref = "agp" }
+compose-gradle-plugin = { group = "org.jetbrains.compose", name = "org.jetbrains.compose.gradle.plugin", version.ref = "compose" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+android-library = { id = "com.android.library", version.ref = "agp" }
+jetbrains-compose = { id = "org.jetbrains.compose", version.ref = "compose" }
+
+
